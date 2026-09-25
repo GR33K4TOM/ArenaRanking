@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 // tipo entity para poder inyectar los beans
-@Entity
 // entidad de tabla para poder
 // tratarla en la persistencia
+@Entity
 @Table(name = "teams")
 @Setter // para no poner setters
 @Getter // para no poner getters
