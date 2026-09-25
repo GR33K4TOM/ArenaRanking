@@ -59,11 +59,20 @@ public class Match {
 
 
     // antes de guardar a persistencia
-    // que se coloque la fecha actual
     @PrePersist
     void onCreate(){
-        // fecha actual
+        // antes de guardar, leer la
+        // fecha actual e insertarla
         this.createdAt = LocalDateTime.now();
+        // antes de guardar, calcule si fue empate o derrota
+        // usando los metodos del enum con los puntajes
+        // del equipo y oponente
+        this.result = MatchResult.calculate(teamScore, opponentScore);
     }
-
+    // antes de actualizar
+    @PreUpdate
+    void onUpdate(){
+        // verificar si gano empato o perdio el partido
+        this.result = MatchResult.calculate(teamScore, opponentScore);
+    }
 }
