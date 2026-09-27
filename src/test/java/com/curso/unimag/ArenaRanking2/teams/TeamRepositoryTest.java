@@ -26,8 +26,8 @@ class TeamRepositoryTest extends PostgresTestContainerSupport {
 
     @Test
     void shouldFindTeamByNameIgnoringCase(){
-        /*gracias al @Builder, se puede definir el objeto mas facilmente
-        asi|*/
+        //gracias al @Builder, se puede definir el objeto mas facilmente
+        //asi
         teamRepository
         .save(Team.builder()
         .name("Team Vortex")
