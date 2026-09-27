@@ -1,4 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
-class MatchRepositoryTest {
-  
+package com.curso.unimag.ArenaRanking2.match;
+
+import com.curso.unimag.ArenaRanking2.PostgresTestContainerSupport;
+
+class MatchRepositoryTest extends PostgresTestContainerSupport {
+
 }
