@@ -1,12 +1,15 @@
 package com.curso.unimag.ArenaRanking2.match.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import java.time.LocalDateTime;
+import java.util.regex.MatchResult;
 
 public record MatchResponse(
-    @NotBlank (max =100)
+    Long id,
+    Long  teamId,
     String opponent,
-    
-    @Size(max = 100)
+    Integer teamScore,
+    MatchResult result,
+    LocalDateTime playedAt,
+    LocalDateTime createdAt
 ) {
 }
