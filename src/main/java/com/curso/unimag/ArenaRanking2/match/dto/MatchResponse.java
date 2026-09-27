@@ -1,7 +1,9 @@
 package com.curso.unimag.ArenaRanking2.match.dto;
 
 import java.time.LocalDateTime;
-import java.util.regex.MatchResult;
+
+import com.curso.unimag.ArenaRanking2.match.MatchResult;
+
 
 public record MatchResponse(
     Long id,
