@@ -40,7 +40,7 @@ public class TeamServiceImpl implements TeamService{
     @Transactional 
     public TeamResponse create(TeamRequest request) {
         teamRepository.findByNameIgnoreCase(request.name()).ifPresent(e->{
-            throw new DataConflictException("A team with name" + request.name()+" already exist")
+            throw new DataConflictException("A team with name" + request.name()+" already exist");
     });
         Team team = teamMapper.toEntity(request);
         return teamMapper.toResponse(teamRepository.save(team));
