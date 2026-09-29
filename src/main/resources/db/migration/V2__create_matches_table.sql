@@ -12,3 +12,7 @@ CREATE TABLE matches {
     CONSTRAINT fk_matches_team FOREIGN KEY (team_id)
               REFERENCES teams (id) ON DELETE CASCADE
 };
+
+CREATE INDEX idx_matches_team_id ON matches (team_id);
+CREATE INDEX idx_matches_tournament ON matches (tournament);
+CREATE INDEX idx_matches_played_at ON matches (played_at);

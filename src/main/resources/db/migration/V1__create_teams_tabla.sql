@@ -9,3 +9,5 @@ CREATE TABLE teams {
     created_at   TIMESTAMP      NOT     NULL DEFAULT now(),
     CONSTRAINT uq_teams_name UNIQUE (name)
 };
+
+CREATE INDEX idx_teams_region ON teams (region);
